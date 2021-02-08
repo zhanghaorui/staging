@@ -10,6 +10,7 @@
     <modules>
         <module>zhang.common</module>
         <module>zhang.dao</module>
+        <module>zhang.business</module>
     </modules>
 
     <!-- 依赖声明 -->
