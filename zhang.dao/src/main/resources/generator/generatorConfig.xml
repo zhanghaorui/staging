@@ -26,8 +26,8 @@
         <!--数据库链接地址账号密码-->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
                         connectionURL="${spring.datasource.url}"
-                        userId="v3test_user"
-                        password="V3Test@56">
+                        userId="root"
+                        password="Zhr199707">
         </jdbcConnection>
 
         <!-- 类型转换 -->
@@ -37,7 +37,7 @@
         </javaTypeResolver>
 
         <!--生成Model类存放位置-->
-        <javaModelGenerator targetPackage="com.zhang.entity" targetProject="src/main/java">
+        <javaModelGenerator targetPackage="com.zhang.dao.entity" targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
@@ -48,11 +48,11 @@
         </sqlMapGenerator>
 
         <!-- 生成mapxml对应client，也就是接口dao -->
-        <javaClientGenerator targetPackage="com.zhang.mapper" targetProject="src/main/java" type="XMLMAPPER" >
+        <javaClientGenerator targetPackage="com.zhang.dao.mapper" targetProject="src/main/java" type="XMLMAPPER" >
             <property name="enableSubPackages" value="false" />
         </javaClientGenerator>
 
-        <table tableName="t_data_auth" schema="v3test_user"  enableCountByExample="true" enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true">
+        <table tableName="t_staging_common_log" schema="v3test_user"  enableCountByExample="true" enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true">
             <generatedKey column="id" sqlStatement="Mysql" identity="true" />
         </table>
 
